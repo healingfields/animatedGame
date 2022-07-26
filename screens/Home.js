@@ -1,6 +1,6 @@
 import { useNavigation } from '@react-navigation/native'
 import React from 'react'
-import { Button, StyleSheet, Text, View } from 'react-native'
+import { Button, StyleSheet, Text, TouchableHighlight, View } from 'react-native'
 
 const styles = StyleSheet.create({
     container: {
@@ -8,6 +8,15 @@ const styles = StyleSheet.create({
         backgroundColor: 'blue',
         alignItems: 'center',
         justifyContent: 'center',
+    },
+    button: {
+        width: 300,
+        height: 300,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-around',
+        borderRadius: 150,
+        backgroundColor: 'black'
     },
     title: {
         color: 'white'
@@ -20,8 +29,11 @@ function Home() {
 
     return (
         <View style={styles.container}>
-            <Text style={styles.title}>Home screen</Text>
-            <Button onPress={() => navigation.navigate('Game')} title='start game!' />
+            <TouchableHighlight
+                onPress={() => navigation.navigate('Game')} style={styles.button}
+            >
+                <Text style={styles.title}>Start a Game!</Text>
+            </TouchableHighlight>
         </View>
     )
 }
