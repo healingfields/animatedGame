@@ -50,9 +50,7 @@ function Game() {
                 (choice === 'higher' && score > baseNumber) ||
                 (choice === 'lower' && score < baseNumber);
 
-            Alert.alert(`You ve ${winner ? 'won' : 'lost'}`,
-                `You scored ${score}`);
-            navigation.goBack();
+            navigation.navigate('Result', { winner });
         }
     }, [baseNumber, score, choice])
 
