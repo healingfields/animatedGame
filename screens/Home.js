@@ -2,13 +2,17 @@ import { useNavigation } from '@react-navigation/native'
 import React from 'react'
 import { Alert, Button, StyleSheet, Text, TouchableHighlight, View } from 'react-native'
 import { LongPressGestureHandler, State, TapGestureHandler } from 'react-native-gesture-handler';
+import { useFonts, Bangers_400Regular } from '@expo-google-fonts/bangers';
+import AppLoading from 'expo-app-loading';
+
+
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: 'blue',
+        backgroundColor: '#E84545',
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: 'center'
     },
     button: {
         width: 300,
@@ -17,14 +21,17 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'space-around',
         borderRadius: 150,
-        backgroundColor: 'black'
+        backgroundColor: '#2B2E4A'
     },
     title: {
-        color: 'white'
+        color: 'white',
+        fontSize: 30,
+        fontFamily: 'Apple Color Emoji'
     }
 })
 
 function Home() {
+
 
     const navigation = useNavigation();
 
@@ -58,5 +65,6 @@ function Home() {
         </View>
     )
 }
+
 
 export default Home

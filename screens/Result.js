@@ -7,9 +7,10 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         alignItems: 'center',
-        justifyContent: 'center',
-        backgroundColor: '#fff'
+        paddingTop: 50,
+        backgroundColor: '#EF5B0C'
     }
+
 })
 
 function Result() {
@@ -19,7 +20,7 @@ function Result() {
 
     return (
         <View style={styles.container}>
-            <Text>You've {winner ? 'won' : 'lost'}</Text>
+            <Text style={{ fontFamily: 'Apple Color Emoji', fontSize: 25, marginBottom: 20 }}>You've {winner ? 'won' : 'lost'}</Text>
             {winner ? (
                 <LottieView
                     autoPlay
@@ -30,7 +31,7 @@ function Result() {
                 <LottieView
                     autoPlay
                     style={{ width: 300, height: 300, marginTop: 10 }}
-                    source={require('../assets/tryagain.json')}
+                    source={require('../assets/lost.json')}
                 />
             )}
         </View>

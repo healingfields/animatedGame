@@ -8,32 +8,15 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: 'indigo'
+        backgroundColor: '#7A4495'
     },
     baseNumber: {
         color: 'white',
-        fontSize: 50,
-        marginBottom: 20
+        fontSize: 40,
+        marginBottom: 20,
+        fontFamily: 'Apple Color Emoji'
     },
-    button: {
-        display: 'flex',
-        alignItems: 'center',
-        borderRadius: 20,
-        backgroundColor: 'pink',
-        paddingHorizontal: 60,
-        paddingVertical: 20,
-        marginVertical: 15
-    },
-    buttonRed: {
-        backgroundColor: 'red'
-    },
-    buttonGreen: {
-        backgroundColor: 'green'
-    },
-    buttonText: {
-        fontSize: 20,
-        color: 'black'
-    }
+
 })
 
 function Game() {

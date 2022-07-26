@@ -12,14 +12,15 @@ const styles = StyleSheet.create({
         marginVertical: 15
     },
     buttonRed: {
-        backgroundColor: 'red'
+        backgroundColor: '#903749'
     },
     buttonGreen: {
-        backgroundColor: 'green'
+        backgroundColor: '#3CCF4E'
     },
     buttonText: {
         fontSize: 20,
-        color: 'black'
+        color: 'white',
+        fontFamily: 'Apple Color Emoji'
     }
 })
 
