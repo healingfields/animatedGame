@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
-import { Button, StyleSheet, Text, View } from 'react-native'
+import { useNavigation } from '@react-navigation/native';
+import React, { useEffect, useState } from 'react'
+import { Alert, Button, StyleSheet, Text, View } from 'react-native'
 
 const styles = StyleSheet.create({
     container: {
@@ -15,9 +16,23 @@ const styles = StyleSheet.create({
 
 function Game() {
 
+    const navigation = useNavigation();
+
     const baseNumber = Math.floor(Math.random() * 100);
     const score = Math.floor(Math.random() * 100);
     const [choice, setChoice] = useState('');
+
+    useEffect(() => {
+        if (choice) {
+            const winner =
+                (choice === 'higher' && score > baseNumber) ||
+                (choice === 'lower' && score < baseNumber);
+
+            Alert.alert(`You ve ${winner ? 'won' : 'lost'}`,
+                `You scored ${score}`);
+            navigation.goBack();
+        }
+    }, [baseNumber, score, choice])
 
     return (
         <View style={styles.container}>
